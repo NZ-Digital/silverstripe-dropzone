@@ -582,12 +582,12 @@ class FileAttachmentField extends FileField
 
             if (is_array($data[$this->getName()])) {
                 $ids = &$data[$this->getName()];
-                foreach ($ids as $i => $id) {
-                    if ($validIDs && !isset($validIDs[$id])) {
-                        unset($ids[$i]);
-                        $isInvalid = true;
-                    }
-                }
+//                foreach ($ids as $i => $id) {
+//                    if ($validIDs && !isset($validIDs[$id])) {
+//                        unset($ids[$i]);
+//                        $isInvalid = true;
+//                    }
+//                }
                 if ($isInvalid) {
                     $ids = array_values($ids);
                     $val = $ids;
